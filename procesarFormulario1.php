@@ -15,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     if (isset($_GET['name']) && isset($_GET['age']) && !empty($_GET['name']) && !empty($_GET['age'])) {
         
         // Recibir los valores del formulario
-        $name = trim($_GET['name']);
-        $age = trim($_GET['age']);
+        $name = htmlspecialchars(trim($_GET['name']));
+        $age = htmlspecialchars(trim($_GET['age']));
         
         // Inicializamos un array de errores
         $errors = [];

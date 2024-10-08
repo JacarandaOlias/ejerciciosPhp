@@ -22,7 +22,7 @@
             $errors = [];
 
             // Validar el nombre (solo letras y espacios)
-            if (!preg_match("/^[a-zA-Z\s]+$/", $name)) {
+    if (!preg_match("/^[a-zA-Z\s]+$/", $name)) {
                 $errors[] = "El nombre solo puede contener letras y espacios.";
             }
 

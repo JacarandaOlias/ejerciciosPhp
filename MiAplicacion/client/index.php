@@ -1,4 +1,5 @@
 <?php
+    session_start();
     require "../header.php";
     // Simulación de base de datos: array asociativo
     require "bd.php";
@@ -18,14 +19,16 @@
             </thead>
             <tbody>
                 <?php
-                 foreach ($data as $dni => $cliente) {
+                 foreach ($_SESSION['data'] as $cliente) {
                     echo "<tr>
                         <td>{$cliente['id']}</td>
                         <td>{$cliente['name']}</td>
                         <td>{$cliente['surname']}</td>
                         <td>
-                            <a href='formulario.php?accion=editar&id={$cliente['id']}' class='btn btn-primary btn-sm'>Editar</a>
-                            <a href='formulario.php?accion=eliminar&id={$cliente['id']}' class='btn btn-danger btn-sm'>Eliminar</a>
+                            <a href='formulario.php?action=show&id={$cliente['id']}' class='btn btn-success btn-sm'>Ver</a>
+                            <a href='formulario.php?action=edit&id={$cliente['id']}' class='btn btn-primary btn-sm'>Editar</a>
+                            <a href='formulario.php?action=delete&id={$cliente['id']}' class='btn btn-danger btn-sm'>Eliminar</a>
+
                         </td>
                     </tr>";
                 }

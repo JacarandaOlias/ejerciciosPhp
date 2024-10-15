@@ -39,6 +39,7 @@
     </style>
 </head>
 <body>
+
     <!-- Menú de navegación -->
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
@@ -56,7 +57,7 @@
                             Clientes
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="clientesDropdown">
-                            <li><a class="dropdown-item" href="client/index.php">Listar Clientes</a></li>
+                            <li><a class="dropdown-item" href="/MiAplicacion/client/index.php">Listar Clientes</a></li>
                             <li><a class="dropdown-item" href="#">Añadir Cliente</a></li>
                         </ul>
                     </li>
@@ -75,4 +76,6 @@
             </div>
         </div>
     </nav>
+    <main class="container">
+
 
